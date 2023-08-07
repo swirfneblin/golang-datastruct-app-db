@@ -32,4 +32,12 @@ func main() {
 	variavel2 := "String 2"
 	fmt.Println(variavel1, variavel2)
 
+	var texto string
+	if numero1 > 5 {
+		texto = "Maior que 5"
+	} else {
+		texto = "Menor que 5"
+	}
+	fmt.Println(texto)
+
 }
