@@ -1,8 +1,8 @@
 package main
 
 import (
-	address "Address/Address"
 	"fmt"
+	address "tests/Address"
 )
 
 func main() {

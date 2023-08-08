@@ -1,0 +1,28 @@
+version: "3.3"
+services:
+  db:
+    platform: linux/x86_64
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - 3306:3306
+    volumes:
+      - my-datavolume:/var/lib/mysql
+      - ./scripts:/docker-entrypoint-initdb.d
+    expose:
+      - 3306
+  # app:
+  #   build:
+  #     dockerfile: Dockerfile
+  #     context: .
+  #     target: dev
+  #   volumes:
+  #     - .:/opt/app/api
+volumes:
+  my-datavolume:

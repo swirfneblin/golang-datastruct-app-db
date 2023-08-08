@@ -3,4 +3,6 @@ go 1.20
 use (
 	"./19-Command line app"
 	./21-Tests
+	./25-db
+	./26-CRUD
 )
