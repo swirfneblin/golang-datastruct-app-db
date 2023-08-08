@@ -1,3 +1,6 @@
 go 1.20
 
-use "./19-Command line app"
+use (
+	"./19-Command line app"
+	./21-Tests
+)
